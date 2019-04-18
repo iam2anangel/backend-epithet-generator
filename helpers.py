@@ -3,6 +3,7 @@
 
 
 import json
+import random
 
 @app.route('/vocabulary')
 class Vocabulary:
@@ -17,17 +18,21 @@ class Vocabulary:
         with open(path, mode=mode) as handle:
             return json.load(handle)
 
-def unit_test_vocab():
-    """Unit test Vocabulary Class"""
+
 
 @app.route('/')
 class EpithetGenerator:
     """select one random word from each column of the list and generate a 
        quantity of epithets from a vocabulary file loaded from a path."""
 
+    def generate_words(self):
 
-def unit_test_epithgen():
-    """Unit test the EpithetGenerator class."""
+    # print("Thou %s %s %s!"((random.choice(Column_1),
+    #                         random.choice(Column_2),
+    #                         random.choice(Column_3)))
+
+
+
 
 
 
