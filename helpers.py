@@ -5,7 +5,7 @@
 import json
 import random
 
-@app.route('/vocabulary')
+
 class Vocabulary:
     """
     Handle loading in a JSON file with proper unfinished swears in it!
@@ -20,16 +20,24 @@ class Vocabulary:
 
 
 
-@app.route('/')
+
 class EpithetGenerator:
     """select one random word from each column of the list and generate a 
        quantity of epithets from a vocabulary file loaded from a path."""
 
-    def generate_words(self):
+    def generate_word(self):
+        data = Vocabulary.read_json("resources/data.json")
+        return "{} {} {}!".format(random.choice(data["Column 1"]), 
+        random.choice(data["Column 2"]), random.choice(data["Column 3"]))
+    
+    def generate_words(self, quantity):
+        epithets_list = []
 
-    # print("Thou %s %s %s!"((random.choice(Column_1),
-    #                         random.choice(Column_2),
-    #                         random.choice(Column_3)))
+        for _ in range(quantity):
+            epithets_list.append(self.generate_word() + "!")
+            return epithets_list
+
+   
 
 
 
