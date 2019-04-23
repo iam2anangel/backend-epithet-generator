@@ -30,6 +30,10 @@ instance/
 # pyenv
 .python-version
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b67c3b42d3d4408adfa09f8bfc59ce4381ec4dca
 # Environments
 .env
 .venv
@@ -40,5 +44,8 @@ env.bak/
 venv.bak/
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b67c3b42d3d4408adfa09f8bfc59ce4381ec4dca
