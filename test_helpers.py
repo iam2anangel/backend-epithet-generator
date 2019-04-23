@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-<<<<<<< HEAD
 
 
 import pytest
@@ -15,12 +14,8 @@ from backend_epithet_generator.helpers import EpithetGenerator as Epg
 json_data = V.read_json("resources/data.json")
 Ep = Epg().generate_word()
 
-
-
-
-
 def test_random_word():
-    assert isinstance(single_ep, dict)
+    assert isinstance(Ep, dict)
     assert len(json_data.keys()) == 3
     assert 'artless' in json_data['Column 1']
     assert 'base-court' in json_data['Column 2']
@@ -48,6 +43,7 @@ def test_single_ep_fail():
         assert isinstance(Ep, dict)
     with pytest.raises(AssertionError):
         assert len(Ep.split(" ")) == "Flask is awesome"
+  
    
 
    
@@ -60,40 +56,3 @@ def test_single_ep_fail():
    
 
    
-=======
-# import pytest
-
-# from helpers import Vocabulary
-# from helpers import EpithetGenerator
-
-
-# json_data = Vocabulary.read_json("resources/data.json")
-# test_word = EpithetGenerator.generate_word()
-# test_words = EpithetGenerator.generate_words()
-
-# def test_read_json():
-#     assert isInstance(json_data, dict)
-#     assert len(json_data.keys()) == 3
-#     assert "artless" in json_data["Column 1"]
-#     assert "base-court" in json_data["Column 2"]
-#     assert "apple_john" in json_data["Column 3"]
-
-
-import pytest
-from helpers import Vocabulary
-from helpers import EpithetGenerator
-
-json_data = Vocabulary.read_json("resources/data.json")
-
-
-def test_read_json_happy():
-    assert isinstance(json_data, dict)
-    assert len(json_data.keys()) == 3
-    assert "bootless" in json_data["Column 1"]
-    assert "base-court" in json_data["Column 2"]
-    assert "coxcomb" in json_data["Column 3"]
-    
-
-
-
->>>>>>> b67c3b42d3d4408adfa09f8bfc59ce4381ec4dca

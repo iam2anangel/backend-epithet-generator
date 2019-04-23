@@ -39,19 +39,4 @@ class EpithetGenerator:
 
         for _ in range(quantity):
             epithets_list.append(self.generate_word() + "!")
-<<<<<<< HEAD
             return epithets_list
-=======
-            return epithets_list
-
-   
-
-
-
-
-
-
-    
-
-    
->>>>>>> b67c3b42d3d4408adfa09f8bfc59ce4381ec4dca
