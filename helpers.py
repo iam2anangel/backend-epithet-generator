@@ -10,10 +10,7 @@ import random
 class Vocabulary:
     """
     Handle loading in a JSON file with proper unfinished swears in it!
-<<<<<<< HEAD
-=======
 
->>>>>>> b67c3b42d3d4408adfa09f8bfc59ce4381ec4dca
     Usage:
         data = Vocabulary.read_json("/path/to/data.json")
     """
