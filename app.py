@@ -18,6 +18,12 @@ def vocabulary():
     d = {"vocabulary": result}
     return jsonify(d)
 
+@app.route('/epithets/<int:quantity>')
+def generate_multiple_epithets():
+    result = EpithetGenerator().generate_words(quantity)
+    d = {"epithets": result}
+    return jsonify(d)
+
 @app.route('/randomize')
 def generate_random():
     random_time = random.randint(1, 500)
