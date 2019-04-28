@@ -11,6 +11,23 @@ from backend_epithet_generator.helpers import EpithetGenerator as Epg
 
 json_data = V.read_json("resources/data.json")
 Ep = Epg().generate_word()
+Epp = Epg().generate_words()
+
+def read_json():
+     assert isintance(json_data, dict)
+
+def read_json_fail():
+     with pytest.raises(AssertionError):
+        assert isinstance(json_data, tuple)
+
+def test_multi_words():
+     assert isinstance(Epp, list)
+     assert len(Epp) == 3
+     assert Epp[1].split(" ")[2].replace("!", "") in json_data["Column 2"]
+
+def test_multi_words_fail():
+     with pytest.raises(AssertionError):
+        assert isinstance(Epp, str)
 
 def test_random_word():
     assert isinstance(Ep, dict)
@@ -41,4 +58,8 @@ def test_single_ep_fail():
         assert isinstance(Ep, dict)
     with pytest.raises(AssertionError):
         assert len(Ep.split(" ")) == "Flask is awesome"
+
+
+
+
     
