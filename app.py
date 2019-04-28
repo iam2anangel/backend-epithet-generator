@@ -17,3 +17,10 @@ def vocabulary():
     result = Vocabulary.read_json('resources/data.json')
     d = {"vocabulary": result}
     return jsonify(d)
+
+@app.route('/epithets/<int:quantity>')
+def generate_multiple_epithets():
+    result = EpithetGenerator().generate_words(quantity)
+    d = {"epithets": result}
+    return jsonify(d)
+
